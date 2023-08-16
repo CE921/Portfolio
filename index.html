@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Page</title>
+    
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="homepage.css" />
+  </head>
+
+  <body class="background-color">
+    <nav class="navbar navbar-expand-sm bg-primary" data-bs-theme="dark">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"><img src="media/my-logo.png" style="width: 150px"/></a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="#">Home</a>
+            </li>
+            <li><a class="nav-link" href="./cv.html">CV</a></li>
+            <li><a class="nav-link" href="./projects.html">Projects</a></li>
+            <li><a class="nav-link" href="./contact.html">Contact</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="header-text">
+      <p>UI/UX Designer</p>
+      <h1>
+        Hi, I'm <span>Selestine</span><br />
+        Adhiambo from Kenya
+      </h1>
+    </div>
+  </div>
+</div>
+<div id="About">
+  <div class="container">
+    <div class="row">
+      <div class="about-col-1">
+        <img src="images\my-pic.jpg" />
+      </div>
+      <div class="about-col-2">
+        <h1 class="sub-title">About Me</h1>
+        <p> I am a dynamic and ambitious web developer with strong sense of
+          responsibility and a results-oriented approach, collaborative by
+          nature,I excell in working with teams to achieve objective with a
+          focus on excellence.<br />
+          My key strenghts lie in exceptional organizational
+          skills,effective time managment, and a proactive attitude towards
+          assisting others.</p>
+          <div class="tab-titles">
+            <p class="tab-links active-links" onclick="opentab(`skills`)">Skills</p>
+            <p class="tab-links" onclick="opentab(`experience`)">Experience</p>
+            <p class="tab-links" onclick="opentab(`education`)">Education</p>
+          </div>
+          <div class="tab-contents" id="skills">
+            <ul>
+              <li><span>Web Development</span><br>Web App Development</li>
+              <li><span>Graphic Design</span><br>Designing bussiness Cards, Bronchures , Posters e.t.c</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="experience">
+            <ul>
+              <li><span>June 2023 - Current</span><br>Web Development Training at GLAD TECH KENYA</li>
+              <li><span>Jan 2020 - May 2020</span><br>Graphic Design at Color Merge Enterprise</li>
+            </ul>
+          </div>
+          <div class="tab-contents" id="education">
+            <ul>
+              <li><span>2023</span><br>Web Development at GLAD TECH</li>
+              <li><span>2021</span><br>Graphic Design at Rias Technical Institute</li>
+            </ul>
+          </div>
+      </div>
+    </div>
+  </div>
+
+ <div id="services">
+  <div class="container">
+    <h1 class="sub-title">My Services</h1>
+    <div class="services-lists">
+   </div>
+   <h2>Web Design</h2>
+   <p> I design,create and optimize websites that deliver exceptional user experiences<br>and meet specific business goals.</p>
+   <h2>Graphic Design</h2>
+   <p> I design Business Cards,Bronchures and Posters</p>
+  </div>
+ </div>
+</div>
+<script>
+  var tablinks = document.getElementsByClassName("tab-links");
+  var tablecontents = document.getElementsByClassName("tab-contents");
+  function opentab(tabname){
+    for(tablink of tablinks){
+      tablink.classlist.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+      tabcontent.classlist.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+  }
+</script>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
